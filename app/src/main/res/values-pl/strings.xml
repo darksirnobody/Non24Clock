@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Non-24 Clock</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_alarm">Alarm</string>
+    <string name="nav_integration">Integracja</string>
+    <string name="nav_account">Konto</string>
+    <string name="nav_settings">Ustawienia</string>
+    
+    <!-- Account Screen -->
+    <string name="cycle_info">non-24 (cykl %1$s)</string>
+    <string name="set_your_time">Ustaw swoją godzinę</string>
+    <string name="set_your_time_desc">Ustaw godzinę swojego wewnętrznego czasu</string>
+    <string name="set_cycle_length">Ustaw długość cyklu</string>
+    <string name="set_cycle_length_desc">Ustaw Tau (długość swojej wewnętrznej doby)</string>
+    <string name="set_sleep_window">Okno snu</string>
+    <string name="set_sleep_window_desc">Ustaw godzinę wstawania i długość snu</string>
+    <string name="wake_time">Godzina wstawania</string>
+    <string name="sleep_duration">Długość snu</string>
+    <string name="hours_short">h</string>
+    <string name="minutes_short">m</string>
+    
+    <!-- Time Picker -->
+    <string name="hours">Godziny</string>
+    <string name="minutes">Minuty</string>
+    <string name="save">Zapisz</string>
+    <string name="cancel">Anuluj</string>
+    
+    <!-- Alarm Screen -->
+    <string name="alarms">Alarmy</string>
+    <string name="add_alarm">Dodaj alarm</string>
+    <string name="add_group">Dodaj grupę</string>
+    <string name="daily">Codziennie</string>
+    <string name="one_time">Jednorazowo</string>
+    <string name="alarm_sound">Dźwięk alarmu</string>
+    <string name="vibration">Wibracja</string>
+    <string name="vibration_off">Wyłączona</string>
+    <string name="vibration_on">Włączona</string>
+    <string name="snooze">Drzemka</string>
+    <string name="snooze_off">Wyłączona</string>
+    <string name="label">Etykieta</string>
+    <string name="delete_alarm">Usuń alarm</string>
+    <string name="delete_group">Usuń grupę</string>
+    <string name="rename_group">Zmień nazwę grupy</string>
+    <string name="group_name">Nazwa grupy</string>
+    <string name="snooze_button">Drzemka</string>
+    <string name="dismiss_button">Wyłącz</string>
+    
+    <!-- Integration Screen -->
+    <string name="integrations">Integracje</string>
+    <string name="coming_soon">Wkrótce</string>
+    <string name="hue_integration">Philips Hue</string>
+    <string name="hue_desc">Synchronizuj światła z Twoim wewnętrznym czasem</string>
+    <string name="oura_integration">Oura Ring</string>
+    <string name="oura_desc">Automatycznie wykryj długość Twojego cyklu</string>
+    <string name="wearos_integration">Wear OS</string>
+    <string name="wearos_desc">Tarcza zegarka z Twoim wewnętrznym czasem</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">Ustawienia</string>
+    <string name="notification">Powiadomienie</string>
+    <string name="notification_desc">Pokazuj stałe powiadomienie</string>
+    <string name="widget">Widget</string>
+    <string name="widget_desc">Dodaj widget do ekranu głównego</string>
+    <string name="language">Język</string>
+    <string name="theme">Motyw</string>
+    <string name="theme_light">Jasny</string>
+    <string name="theme_dark">Ciemny</string>
+    <string name="theme_system">Systemowy</string>
+    <string name="accessibility">Dostępność</string>
+    <string name="talkback_info">Ustawienia TalkBack</string>
+    
+    <!-- Accessibility descriptions -->
+    <string name="cd_increase_hours">Zwiększ godziny</string>
+    <string name="cd_decrease_hours">Zmniejsz godziny</string>
+    <string name="cd_increase_minutes">Zwiększ minuty</string>
+    <string name="cd_decrease_minutes">Zmniejsz minuty</string>
+    <string name="cd_toggle_alarm">Włącz lub wyłącz alarm</string>
+    <string name="cd_toggle_daily">Włącz lub wyłącz codzienne powtarzanie</string>
+    <string name="cd_select_group">Wybierz grupę alarmów</string>
+    <string name="cd_current_time">Aktualny wewnętrzny czas: %1$s</string>
+    <string name="cd_cycle_length">Długość cyklu: %1$s</string>
+
+    <!-- Permissions -->
+    <string name="permissions_section">Uprawnienia</string>
+    <string name="permission_notifications">Powiadomienia</string>
+    <string name="permission_notifications_desc">Zezwól na powiadomienia alarmów</string>
+    <string name="permission_battery">Optymalizacja baterii</string>
+    <string name="permission_battery_desc">Wyłącz, aby alarmy działały niezawodnie</string>
+    <string name="permission_overlay">Wyświetlanie nad innymi</string>
+    <string name="permission_overlay_desc">Wymagane do pokazania ekranu alarmu</string>
+    <string name="permission_granted">Przyznano</string>
+    <string name="permission_not_granted">Dotknij, aby przyznać</string>
+
+    <!-- Calendar -->
+    <string name="nav_calendar">Kalendarz</string>
+    <string name="calendar_today">Dziś</string>
+    <string name="calendar_week">Tydzień</string>
+    <string name="calendar_month">Miesiąc</string>
+    <string name="sleep_window">Okno snu</string>
+    <string name="sleep_start">Początek snu</string>
+    <string name="sleep_end">Pobudka</string>
+    <string name="calendar_day">Dzień</string>
+
+    <!-- Widget -->
+    <string name="widget_section">Widget</string>
+    <string name="widget_add">Dodaj widget</string>
+    <string name="widget_add_desc">Dodaj widget zegara na ekran główny</string>
+    <string name="widget_background">Tło</string>
+    <string name="widget_background_dark">Ciemne</string>
+    <string name="widget_background_light">Jasne</string>
+    <string name="widget_background_transparent">Przezroczyste</string>
+    <string name="widget_size">Rozmiar tekstu</string>
+    <string name="widget_size_small">Mały</string>
+    <string name="widget_size_medium">Średni</string>
+    <string name="widget_size_large">Duży</string>
+    <string name="widget_size_xlarge">Bardzo duży</string>
+    <string name="widget_show_label">Pokaż napis \"non-24\"</string>
+    <string name="widget_show_label_desc">Wyświetl etykietę pod czasem</string>
+    <string name="widget_bold">Pogrubiony tekst</string>
+    <string name="widget_bold_desc">Użyj pogrubionej czcionki</string>
+
+    <!-- Sections -->
+    <string name="clock_section">Zegar</string>
+    <string name="app_section">Aplikacja</string>
+    <string name="language_system">Systemowy</string>
+</resources>
