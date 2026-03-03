@@ -17,35 +17,42 @@ import kotlinx.coroutines.launch
     exportSchema = false
 )
 abstract class Non24Database : RoomDatabase() {
-    
+
     abstract fun alarmDao(): AlarmDao
-    
+
     companion object {
         @Volatile
         private var INSTANCE: Non24Database? = null
-        
+
         fun getDatabase(context: Context): Non24Database {
             return INSTANCE ?: synchronized(this) {
+                // Use Device Protected Storage for boot-time access
+                val deviceContext = if (context.isDeviceProtectedStorage) {
+                    context
+                } else {
+                    context.createDeviceProtectedStorageContext()
+                }
+
                 val instance = Room.databaseBuilder(
-                    context.applicationContext,
+                    deviceContext.applicationContext,
                     Non24Database::class.java,
                     "non24_database"
                 )
-                .addCallback(object : Callback() {
-                    override fun onCreate(db: SupportSQLiteDatabase) {
-                        super.onCreate(db)
-                        // Create default group on first launch
-                        CoroutineScope(Dispatchers.IO).launch {
-                            INSTANCE?.alarmDao()?.insertGroup(
-                                AlarmGroup(
-                                    name = "Alarms", // Will be localized in UI
-                                    order = 0
+                    .addCallback(object : Callback() {
+                        override fun onCreate(db: SupportSQLiteDatabase) {
+                            super.onCreate(db)
+                            // Create default group on first launch
+                            CoroutineScope(Dispatchers.IO).launch {
+                                INSTANCE?.alarmDao()?.insertGroup(
+                                    AlarmGroup(
+                                        name = "Alarms", // Will be localized in UI
+                                        order = 0
+                                    )
                                 )
-                            )
+                            }
                         }
-                    }
-                })
-                .build()
+                    })
+                    .build()
                 INSTANCE = instance
                 instance
             }

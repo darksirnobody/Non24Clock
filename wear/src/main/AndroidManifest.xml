@@ -17,11 +17,12 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
+        <!-- Original watchface -->
         <service
             android:name=".Non24WatchFace"
             android:directBootAware="true"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/watchface_classic"
             android:permission="android.permission.BIND_WALLPAPER">
 
             <intent-filter>
@@ -38,6 +39,30 @@
             <meta-data
                 android:name="com.google.android.wearable.watchface.preview_circular"
                 android:resource="@drawable/watchface_preview" />
+        </service>
+
+        <!-- Minimal watchface -->
+        <service
+            android:name=".Non24WatchFaceMinimal"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="@string/watchface_minimal"
+            android:permission="android.permission.BIND_WALLPAPER">
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face_minimal" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/watchface_preview_minimal" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview_circular"
+                android:resource="@drawable/watchface_preview_minimal" />
         </service>
 
     </application>

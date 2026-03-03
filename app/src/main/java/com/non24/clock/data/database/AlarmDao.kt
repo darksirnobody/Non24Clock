@@ -7,7 +7,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AlarmDao {
-    
+
+    @Query("SELECT * FROM alarms")
+    suspend fun getAllAlarmsOnce(): List<Alarm>
+
     // Alarm Groups
     @Query("SELECT * FROM alarm_groups ORDER BY `order` ASC")
     fun getAllGroups(): Flow<List<AlarmGroup>>
@@ -20,7 +23,7 @@ interface AlarmDao {
     
     @Update
     suspend fun updateGroup(group: AlarmGroup)
-    
+
     @Delete
     suspend fun deleteGroup(group: AlarmGroup)
     
